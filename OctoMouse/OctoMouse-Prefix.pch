@@ -1,0 +1,7 @@
+#ifdef __OBJC__
+
+#import <Cocoa/Cocoa.h>
+
+#define SUPPORT_URL @"http://octomouse.takohi.com/#support"
+
+#endif

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4A21A86C-23EB-4E4D-9A89-0A9F1C2A6CDA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Popup</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7307E7D55156ABDC3577834A8C1B20BEC42C40F7</key>
+		<string>https://bitbucket.org/Takohi-Jona/mousotron.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Popup.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7307E7D55156ABDC3577834A8C1B20BEC42C40F7</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/Takohi-Jona/mousotron.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7307E7D55156ABDC3577834A8C1B20BEC42C40F7</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7307E7D55156ABDC3577834A8C1B20BEC42C40F7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>mousotron-reloaded</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,569 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD4F7C0913C30F9F00825C6E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4F7C0813C30F9F00825C6E /* Cocoa.framework */; };
+		DD4F7C1513C30F9F00825C6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C1413C30F9F00825C6E /* main.m */; };
+		DD4F7C1C13C30F9F00825C6E /* ApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C1B13C30F9F00825C6E /* ApplicationDelegate.m */; };
+		DD4F7C3813C317A500825C6E /* MenubarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C3713C317A500825C6E /* MenubarController.m */; };
+		DD4F7C3C13C3180800825C6E /* StatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C3B13C3180800825C6E /* StatusItemView.m */; };
+		DD4F7C3F13C318D600825C6E /* PanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C3E13C318D600825C6E /* PanelController.m */; };
+		DD4F7C4713C3208500825C6E /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C4613C3208500825C6E /* BackgroundView.m */; };
+		DD4F7C4B13C322FA00825C6E /* Status.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4F7C4913C322FA00825C6E /* Status.png */; };
+		DD4F7C4C13C322FA00825C6E /* StatusHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4F7C4A13C322FA00825C6E /* StatusHighlighted.png */; };
+		DDF4EFAC16C80A510044D141 /* Status@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF4EFAB16C80A510044D141 /* Status@2x.png */; };
+		DDF4EFAE16C80AD30044D141 /* StatusHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF4EFAD16C80AD30044D141 /* StatusHighlighted@2x.png */; };
+		FC0073E01A359984006EAD5C /* Mouse.png in Resources */ = {isa = PBXBuildFile; fileRef = FC0073DC1A359984006EAD5C /* Mouse.png */; };
+		FC0073E11A359984006EAD5C /* Mouse@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC0073DD1A359984006EAD5C /* Mouse@2x.png */; };
+		FC0073E21A359984006EAD5C /* MouseHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = FC0073DE1A359984006EAD5C /* MouseHighlighted.png */; };
+		FC0073E31A359984006EAD5C /* MouseHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC0073DF1A359984006EAD5C /* MouseHighlighted@2x.png */; };
+		FC018E491A315BC100E355A9 /* InputEventsController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC018E461A315BC100E355A9 /* InputEventsController.m */; };
+		FC5720431A3565D60028B938 /* InputEventsLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5720421A3565D60028B938 /* InputEventsLogger.m */; };
+		FC61CD571CB7A597002945C7 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC61CD561CB7A597002945C7 /* Media.xcassets */; };
+		FCBB5FBD1AA9AAD7004951C9 /* Speedometer.png in Resources */ = {isa = PBXBuildFile; fileRef = FCBB5FBB1AA9AAD7004951C9 /* Speedometer.png */; };
+		FCBB5FC11AA9B413004951C9 /* SpeedometerHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = FCBB5FBF1AA9B413004951C9 /* SpeedometerHighlighted.png */; };
+		FCBB5FC21AA9B413004951C9 /* SpeedometerHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCBB5FC01AA9B413004951C9 /* SpeedometerHighlighted@2x.png */; };
+		FCC0EEF31A42C3710020E720 /* PreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC0EEF11A42C3710020E720 /* PreferencesWindowController.m */; };
+		FCC0EEF71A42DC050020E720 /* LaunchAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC0EEF61A42DC050020E720 /* LaunchAtLoginController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FCC0EEFA1A42E2A50020E720 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC0EEF91A42E2A50020E720 /* Preferences.m */; };
+		FCC6A4271A37464100AD0513 /* Keyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC6A4231A37464100AD0513 /* Keyboard.png */; };
+		FCC6A4281A37464100AD0513 /* Keyboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC6A4241A37464100AD0513 /* Keyboard@2x.png */; };
+		FCC6A4291A37464100AD0513 /* KeyboardHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC6A4251A37464100AD0513 /* KeyboardHighlighted.png */; };
+		FCC6A42A1A37464100AD0513 /* KeyboardHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC6A4261A37464100AD0513 /* KeyboardHighlighted@2x.png */; };
+		FCC6A42C1A3808FB00AD0513 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC6A42B1A3808FB00AD0513 /* Icon.png */; };
+		FCC6A42E1A38094600AD0513 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC6A42D1A38094600AD0513 /* Icon@2x.png */; };
+		FCD73F181A429D30004BCE9A /* AboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD73F161A429D30004BCE9A /* AboutWindowController.m */; };
+		FCE1DBC31A43D4DA00F21F30 /* AboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE1DBC51A43D4DA00F21F30 /* AboutWindow.xib */; };
+		FCE1DBC71A43D4F000F21F30 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE1DBC91A43D4F000F21F30 /* PreferencesWindow.xib */; };
+		FCE1DBCB1A43D4FA00F21F30 /* Panel.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE1DBCD1A43D4FA00F21F30 /* Panel.xib */; };
+		FCE1DBD01A44136D00F21F30 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE1DBCF1A44136D00F21F30 /* MainMenu.xib */; };
+		FCFD3AA61A42B61100BA5DA7 /* BorderlessKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFD3AA51A42B61100BA5DA7 /* BorderlessKeyWindow.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DD4F7C0413C30F9F00825C6E /* OctoMouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OctoMouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD4F7C0813C30F9F00825C6E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		DD4F7C0B13C30F9F00825C6E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		DD4F7C0C13C30F9F00825C6E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DD4F7C0D13C30F9F00825C6E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DD4F7C1013C30F9F00825C6E /* OctoMouse-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "OctoMouse-Info.plist"; path = "OctoMouse/OctoMouse-Info.plist"; sourceTree = "<group>"; };
+		DD4F7C1413C30F9F00825C6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DD4F7C1613C30F9F00825C6E /* OctoMouse-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OctoMouse-Prefix.pch"; sourceTree = "<group>"; };
+		DD4F7C1A13C30F9F00825C6E /* ApplicationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationDelegate.h; sourceTree = "<group>"; };
+		DD4F7C1B13C30F9F00825C6E /* ApplicationDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplicationDelegate.m; sourceTree = "<group>"; };
+		DD4F7C3613C317A500825C6E /* MenubarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenubarController.h; sourceTree = "<group>"; };
+		DD4F7C3713C317A500825C6E /* MenubarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenubarController.m; sourceTree = "<group>"; };
+		DD4F7C3A13C3180800825C6E /* StatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusItemView.h; sourceTree = "<group>"; };
+		DD4F7C3B13C3180800825C6E /* StatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusItemView.m; sourceTree = "<group>"; };
+		DD4F7C3D13C318D600825C6E /* PanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelController.h; sourceTree = "<group>"; };
+		DD4F7C3E13C318D600825C6E /* PanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanelController.m; sourceTree = "<group>"; };
+		DD4F7C4513C3208500825C6E /* BackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundView.h; sourceTree = "<group>"; };
+		DD4F7C4613C3208500825C6E /* BackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundView.m; sourceTree = "<group>"; };
+		DD4F7C4913C322FA00825C6E /* Status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Status.png; path = OctoMouse/Status.png; sourceTree = "<group>"; };
+		DD4F7C4A13C322FA00825C6E /* StatusHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StatusHighlighted.png; path = OctoMouse/StatusHighlighted.png; sourceTree = "<group>"; };
+		DDF4EFAB16C80A510044D141 /* Status@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Status@2x.png"; path = "OctoMouse/Status@2x.png"; sourceTree = "<group>"; };
+		DDF4EFAD16C80AD30044D141 /* StatusHighlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "StatusHighlighted@2x.png"; path = "OctoMouse/StatusHighlighted@2x.png"; sourceTree = "<group>"; };
+		FC0073DC1A359984006EAD5C /* Mouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mouse.png; path = OctoMouse/Graphics/Mouse.png; sourceTree = "<group>"; };
+		FC0073DD1A359984006EAD5C /* Mouse@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Mouse@2x.png"; path = "OctoMouse/Graphics/Mouse@2x.png"; sourceTree = "<group>"; };
+		FC0073DE1A359984006EAD5C /* MouseHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MouseHighlighted.png; path = OctoMouse/Graphics/MouseHighlighted.png; sourceTree = "<group>"; };
+		FC0073DF1A359984006EAD5C /* MouseHighlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MouseHighlighted@2x.png"; path = "OctoMouse/Graphics/MouseHighlighted@2x.png"; sourceTree = "<group>"; };
+		FC018E461A315BC100E355A9 /* InputEventsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputEventsController.m; sourceTree = "<group>"; };
+		FC018E471A315BC100E355A9 /* InputEventsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputEventsController.h; sourceTree = "<group>"; };
+		FC09C6941AB0528F0096F2BE /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/PreferencesWindow.xib; sourceTree = "<group>"; };
+		FC09C6951AB0528F0096F2BE /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/AboutWindow.xib; sourceTree = "<group>"; };
+		FC09C6961AB0528F0096F2BE /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/Panel.xib; sourceTree = "<group>"; };
+		FC5720411A3565D60028B938 /* InputEventsLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputEventsLogger.h; sourceTree = "<group>"; };
+		FC5720421A3565D60028B938 /* InputEventsLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputEventsLogger.m; sourceTree = "<group>"; };
+		FC61CD551CB79E30002945C7 /* OctoMouse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = OctoMouse.entitlements; path = OctoMouse/OctoMouse.entitlements; sourceTree = "<group>"; };
+		FC61CD561CB7A597002945C7 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = OctoMouse/Media.xcassets; sourceTree = "<group>"; };
+		FC66D1981CB6183800168189 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/PreferencesWindow.xib; sourceTree = "<group>"; };
+		FC66D1991CB6183800168189 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/AboutWindow.xib; sourceTree = "<group>"; };
+		FC66D19A1CB6183800168189 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/Panel.xib; sourceTree = "<group>"; };
+		FC66D19C1CB618B600168189 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "pt-BR"; path = "pt-BR.lproj/PreferencesWindow.xib"; sourceTree = "<group>"; };
+		FC66D19D1CB618B600168189 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "pt-BR"; path = "pt-BR.lproj/AboutWindow.xib"; sourceTree = "<group>"; };
+		FC66D19E1CB618B600168189 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "pt-BR"; path = "pt-BR.lproj/Panel.xib"; sourceTree = "<group>"; };
+		FC66D1A01CB6191500168189 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/PreferencesWindow.xib"; sourceTree = "<group>"; };
+		FC66D1A11CB6191500168189 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/AboutWindow.xib"; sourceTree = "<group>"; };
+		FC66D1A21CB6191500168189 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/Panel.xib"; sourceTree = "<group>"; };
+		FCBB5FBB1AA9AAD7004951C9 /* Speedometer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Speedometer.png; path = OctoMouse/Graphics/Speedometer.png; sourceTree = "<group>"; };
+		FCBB5FBF1AA9B413004951C9 /* SpeedometerHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SpeedometerHighlighted.png; path = OctoMouse/Graphics/SpeedometerHighlighted.png; sourceTree = "<group>"; };
+		FCBB5FC01AA9B413004951C9 /* SpeedometerHighlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SpeedometerHighlighted@2x.png"; path = "OctoMouse/Graphics/SpeedometerHighlighted@2x.png"; sourceTree = "<group>"; };
+		FCC0EEF01A42C3710020E720 /* PreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesWindowController.h; sourceTree = "<group>"; };
+		FCC0EEF11A42C3710020E720 /* PreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesWindowController.m; sourceTree = "<group>"; };
+		FCC0EEF51A42DC050020E720 /* LaunchAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchAtLoginController.h; sourceTree = "<group>"; };
+		FCC0EEF61A42DC050020E720 /* LaunchAtLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchAtLoginController.m; sourceTree = "<group>"; };
+		FCC0EEF81A42E2A50020E720 /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
+		FCC0EEF91A42E2A50020E720 /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
+		FCC6A4231A37464100AD0513 /* Keyboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Keyboard.png; path = OctoMouse/Graphics/Keyboard.png; sourceTree = "<group>"; };
+		FCC6A4241A37464100AD0513 /* Keyboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Keyboard@2x.png"; path = "OctoMouse/Graphics/Keyboard@2x.png"; sourceTree = "<group>"; };
+		FCC6A4251A37464100AD0513 /* KeyboardHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = KeyboardHighlighted.png; path = OctoMouse/Graphics/KeyboardHighlighted.png; sourceTree = "<group>"; };
+		FCC6A4261A37464100AD0513 /* KeyboardHighlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "KeyboardHighlighted@2x.png"; path = "OctoMouse/Graphics/KeyboardHighlighted@2x.png"; sourceTree = "<group>"; };
+		FCC6A42B1A3808FB00AD0513 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = OctoMouse/Graphics/Icon.png; sourceTree = "<group>"; };
+		FCC6A42D1A38094600AD0513 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "OctoMouse/Graphics/Icon@2x.png"; sourceTree = "<group>"; };
+		FCD73F151A429D30004BCE9A /* AboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutWindowController.h; sourceTree = "<group>"; };
+		FCD73F161A429D30004BCE9A /* AboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutWindowController.m; sourceTree = "<group>"; };
+		FCE1DBC41A43D4DA00F21F30 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AboutWindow.xib; sourceTree = "<group>"; };
+		FCE1DBC61A43D4DB00F21F30 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/AboutWindow.xib; sourceTree = "<group>"; };
+		FCE1DBC81A43D4F000F21F30 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PreferencesWindow.xib; sourceTree = "<group>"; };
+		FCE1DBCA1A43D4F200F21F30 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/PreferencesWindow.xib; sourceTree = "<group>"; };
+		FCE1DBCC1A43D4FA00F21F30 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Panel.xib; sourceTree = "<group>"; };
+		FCE1DBCE1A43D4FB00F21F30 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/Panel.xib; sourceTree = "<group>"; };
+		FCE1DBCF1A44136D00F21F30 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = OctoMouse/MainMenu.xib; sourceTree = "<group>"; };
+		FCFD3AA41A42B61100BA5DA7 /* BorderlessKeyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BorderlessKeyWindow.h; sourceTree = "<group>"; };
+		FCFD3AA51A42B61100BA5DA7 /* BorderlessKeyWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BorderlessKeyWindow.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD4F7C0113C30F9F00825C6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD4F7C0913C30F9F00825C6E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD4F7BF913C30F9F00825C6E = {
+			isa = PBXGroup;
+			children = (
+				FC61CD561CB7A597002945C7 /* Media.xcassets */,
+				FC61CD551CB79E30002945C7 /* OctoMouse.entitlements */,
+				DD4F7C0E13C30F9F00825C6E /* Sources */,
+				DD4F7C2813C3123E00825C6E /* User Interface */,
+				DD4F7C0713C30F9F00825C6E /* Frameworks */,
+				DD4F7C0513C30F9F00825C6E /* Products */,
+				DD4F7C1013C30F9F00825C6E /* OctoMouse-Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		DD4F7C0513C30F9F00825C6E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F7C0413C30F9F00825C6E /* OctoMouse.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD4F7C0713C30F9F00825C6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F7C0B13C30F9F00825C6E /* AppKit.framework */,
+				DD4F7C0C13C30F9F00825C6E /* CoreData.framework */,
+				DD4F7C0D13C30F9F00825C6E /* Foundation.framework */,
+				DD4F7C0813C30F9F00825C6E /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD4F7C0E13C30F9F00825C6E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FC5720441A3565E20028B938 /* Models */,
+				DD4F7C2613C311DF00825C6E /* Controllers */,
+				DD4F7C3913C317EC00825C6E /* Views */,
+				DD4F7C0F13C30F9F00825C6E /* Supporting Files */,
+			);
+			name = Sources;
+			path = OctoMouse;
+			sourceTree = "<group>";
+		};
+		DD4F7C0F13C30F9F00825C6E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F7C1613C30F9F00825C6E /* OctoMouse-Prefix.pch */,
+				DD4F7C1413C30F9F00825C6E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DD4F7C2613C311DF00825C6E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FCC0EEF51A42DC050020E720 /* LaunchAtLoginController.h */,
+				FCC0EEF61A42DC050020E720 /* LaunchAtLoginController.m */,
+				FCC0EEF01A42C3710020E720 /* PreferencesWindowController.h */,
+				FCC0EEF11A42C3710020E720 /* PreferencesWindowController.m */,
+				FC018E471A315BC100E355A9 /* InputEventsController.h */,
+				FC018E461A315BC100E355A9 /* InputEventsController.m */,
+				DD4F7C1A13C30F9F00825C6E /* ApplicationDelegate.h */,
+				DD4F7C1B13C30F9F00825C6E /* ApplicationDelegate.m */,
+				DD4F7C3613C317A500825C6E /* MenubarController.h */,
+				DD4F7C3713C317A500825C6E /* MenubarController.m */,
+				DD4F7C3D13C318D600825C6E /* PanelController.h */,
+				DD4F7C3E13C318D600825C6E /* PanelController.m */,
+				FCD73F151A429D30004BCE9A /* AboutWindowController.h */,
+				FCD73F161A429D30004BCE9A /* AboutWindowController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		DD4F7C2813C3123E00825C6E /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F7C4813C322D800825C6E /* Graphics */,
+				DD4F7C2913C3124300825C6E /* XIBs */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		DD4F7C2913C3124300825C6E /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				FCE1DBCF1A44136D00F21F30 /* MainMenu.xib */,
+				FCE1DBC91A43D4F000F21F30 /* PreferencesWindow.xib */,
+				FCE1DBC51A43D4DA00F21F30 /* AboutWindow.xib */,
+				FCE1DBCD1A43D4FA00F21F30 /* Panel.xib */,
+			);
+			name = XIBs;
+			sourceTree = "<group>";
+		};
+		DD4F7C3913C317EC00825C6E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F7C3A13C3180800825C6E /* StatusItemView.h */,
+				DD4F7C3B13C3180800825C6E /* StatusItemView.m */,
+				DD4F7C4513C3208500825C6E /* BackgroundView.h */,
+				DD4F7C4613C3208500825C6E /* BackgroundView.m */,
+				FCFD3AA41A42B61100BA5DA7 /* BorderlessKeyWindow.h */,
+				FCFD3AA51A42B61100BA5DA7 /* BorderlessKeyWindow.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		DD4F7C4813C322D800825C6E /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				FCC6A42D1A38094600AD0513 /* Icon@2x.png */,
+				FCBB5FBF1AA9B413004951C9 /* SpeedometerHighlighted.png */,
+				FCBB5FC01AA9B413004951C9 /* SpeedometerHighlighted@2x.png */,
+				FCBB5FBB1AA9AAD7004951C9 /* Speedometer.png */,
+				FCC6A42B1A3808FB00AD0513 /* Icon.png */,
+				FCC6A4231A37464100AD0513 /* Keyboard.png */,
+				FCC6A4241A37464100AD0513 /* Keyboard@2x.png */,
+				FCC6A4251A37464100AD0513 /* KeyboardHighlighted.png */,
+				FCC6A4261A37464100AD0513 /* KeyboardHighlighted@2x.png */,
+				FC0073DC1A359984006EAD5C /* Mouse.png */,
+				FC0073DD1A359984006EAD5C /* Mouse@2x.png */,
+				FC0073DE1A359984006EAD5C /* MouseHighlighted.png */,
+				FC0073DF1A359984006EAD5C /* MouseHighlighted@2x.png */,
+				DD4F7C4913C322FA00825C6E /* Status.png */,
+				DDF4EFAB16C80A510044D141 /* Status@2x.png */,
+				DD4F7C4A13C322FA00825C6E /* StatusHighlighted.png */,
+				DDF4EFAD16C80AD30044D141 /* StatusHighlighted@2x.png */,
+			);
+			name = Graphics;
+			sourceTree = "<group>";
+		};
+		FC5720441A3565E20028B938 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC5720411A3565D60028B938 /* InputEventsLogger.h */,
+				FC5720421A3565D60028B938 /* InputEventsLogger.m */,
+				FCC0EEF81A42E2A50020E720 /* Preferences.h */,
+				FCC0EEF91A42E2A50020E720 /* Preferences.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD4F7C0313C30F9F00825C6E /* OctoMouse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD4F7C2213C30F9F00825C6E /* Build configuration list for PBXNativeTarget "OctoMouse" */;
+			buildPhases = (
+				DD4F7C0013C30F9F00825C6E /* Sources */,
+				DD4F7C0113C30F9F00825C6E /* Frameworks */,
+				DD4F7C0213C30F9F00825C6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OctoMouse;
+			productName = Popup;
+			productReference = DD4F7C0413C30F9F00825C6E /* OctoMouse.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD4F7BFB13C30F9F00825C6E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Takohi;
+				TargetAttributes = {
+					DD4F7C0313C30F9F00825C6E = {
+						DevelopmentTeam = DLDHLCUF8Z;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = DD4F7BFE13C30F9F00825C6E /* Build configuration list for PBXProject "OctoMouse" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				fr,
+				de,
+				ru,
+				"pt-BR",
+				"zh-Hans",
+			);
+			mainGroup = DD4F7BF913C30F9F00825C6E;
+			productRefGroup = DD4F7C0513C30F9F00825C6E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD4F7C0313C30F9F00825C6E /* OctoMouse */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD4F7C0213C30F9F00825C6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCE1DBC71A43D4F000F21F30 /* PreferencesWindow.xib in Resources */,
+				FC0073E11A359984006EAD5C /* Mouse@2x.png in Resources */,
+				FCC6A42E1A38094600AD0513 /* Icon@2x.png in Resources */,
+				FCC6A4281A37464100AD0513 /* Keyboard@2x.png in Resources */,
+				FCBB5FC21AA9B413004951C9 /* SpeedometerHighlighted@2x.png in Resources */,
+				FCE1DBCB1A43D4FA00F21F30 /* Panel.xib in Resources */,
+				FC0073E01A359984006EAD5C /* Mouse.png in Resources */,
+				DD4F7C4B13C322FA00825C6E /* Status.png in Resources */,
+				DD4F7C4C13C322FA00825C6E /* StatusHighlighted.png in Resources */,
+				FCC6A4291A37464100AD0513 /* KeyboardHighlighted.png in Resources */,
+				FCBB5FC11AA9B413004951C9 /* SpeedometerHighlighted.png in Resources */,
+				FCC6A42A1A37464100AD0513 /* KeyboardHighlighted@2x.png in Resources */,
+				DDF4EFAC16C80A510044D141 /* Status@2x.png in Resources */,
+				FCBB5FBD1AA9AAD7004951C9 /* Speedometer.png in Resources */,
+				FCC6A4271A37464100AD0513 /* Keyboard.png in Resources */,
+				FCC6A42C1A3808FB00AD0513 /* Icon.png in Resources */,
+				FC61CD571CB7A597002945C7 /* Media.xcassets in Resources */,
+				FC0073E21A359984006EAD5C /* MouseHighlighted.png in Resources */,
+				FCE1DBC31A43D4DA00F21F30 /* AboutWindow.xib in Resources */,
+				DDF4EFAE16C80AD30044D141 /* StatusHighlighted@2x.png in Resources */,
+				FC0073E31A359984006EAD5C /* MouseHighlighted@2x.png in Resources */,
+				FCE1DBD01A44136D00F21F30 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD4F7C0013C30F9F00825C6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD4F7C1513C30F9F00825C6E /* main.m in Sources */,
+				DD4F7C1C13C30F9F00825C6E /* ApplicationDelegate.m in Sources */,
+				FCFD3AA61A42B61100BA5DA7 /* BorderlessKeyWindow.m in Sources */,
+				DD4F7C3813C317A500825C6E /* MenubarController.m in Sources */,
+				FCC0EEF31A42C3710020E720 /* PreferencesWindowController.m in Sources */,
+				FCD73F181A429D30004BCE9A /* AboutWindowController.m in Sources */,
+				FC5720431A3565D60028B938 /* InputEventsLogger.m in Sources */,
+				FC018E491A315BC100E355A9 /* InputEventsController.m in Sources */,
+				DD4F7C3C13C3180800825C6E /* StatusItemView.m in Sources */,
+				FCC0EEF71A42DC050020E720 /* LaunchAtLoginController.m in Sources */,
+				DD4F7C3F13C318D600825C6E /* PanelController.m in Sources */,
+				FCC0EEFA1A42E2A50020E720 /* Preferences.m in Sources */,
+				DD4F7C4713C3208500825C6E /* BackgroundView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FCE1DBC51A43D4DA00F21F30 /* AboutWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCE1DBC41A43D4DA00F21F30 /* en */,
+				FCE1DBC61A43D4DB00F21F30 /* fr */,
+				FC09C6951AB0528F0096F2BE /* de */,
+				FC66D1991CB6183800168189 /* ru */,
+				FC66D19D1CB618B600168189 /* pt-BR */,
+				FC66D1A11CB6191500168189 /* zh-Hans */,
+			);
+			name = AboutWindow.xib;
+			path = OctoMouse;
+			sourceTree = "<group>";
+		};
+		FCE1DBC91A43D4F000F21F30 /* PreferencesWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCE1DBC81A43D4F000F21F30 /* en */,
+				FCE1DBCA1A43D4F200F21F30 /* fr */,
+				FC09C6941AB0528F0096F2BE /* de */,
+				FC66D1981CB6183800168189 /* ru */,
+				FC66D19C1CB618B600168189 /* pt-BR */,
+				FC66D1A01CB6191500168189 /* zh-Hans */,
+			);
+			name = PreferencesWindow.xib;
+			path = OctoMouse;
+			sourceTree = "<group>";
+		};
+		FCE1DBCD1A43D4FA00F21F30 /* Panel.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCE1DBCC1A43D4FA00F21F30 /* en */,
+				FCE1DBCE1A43D4FB00F21F30 /* fr */,
+				FC09C6961AB0528F0096F2BE /* de */,
+				FC66D19A1CB6183800168189 /* ru */,
+				FC66D19E1CB618B600168189 /* pt-BR */,
+				FC66D1A21CB6191500168189 /* zh-Hans */,
+			);
+			name = Panel.xib;
+			path = OctoMouse;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD4F7C2013C30F9F00825C6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DD4F7C2113C30F9F00825C6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DD4F7C2313C30F9F00825C6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = OctoMouse/OctoMouse.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OctoMouse/OctoMouse-Prefix.pch";
+				INFOPLIST_FILE = "OctoMouse/OctoMouse-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.takohi.octomouse;
+				PRODUCT_NAME = OctoMouse;
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DD4F7C2413C30F9F00825C6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = OctoMouse/OctoMouse.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OctoMouse/OctoMouse-Prefix.pch";
+				INFOPLIST_FILE = "OctoMouse/OctoMouse-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.takohi.octomouse;
+				PRODUCT_NAME = OctoMouse;
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD4F7BFE13C30F9F00825C6E /* Build configuration list for PBXProject "OctoMouse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD4F7C2013C30F9F00825C6E /* Debug */,
+				DD4F7C2113C30F9F00825C6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD4F7C2213C30F9F00825C6E /* Build configuration list for PBXNativeTarget "OctoMouse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD4F7C2313C30F9F00825C6E /* Debug */,
+				DD4F7C2413C30F9F00825C6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD4F7BFB13C30F9F00825C6E /* Project object */;
+}
