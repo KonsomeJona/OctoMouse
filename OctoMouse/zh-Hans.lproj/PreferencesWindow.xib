@@ -39,7 +39,7 @@
                     </comboBox>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tPL-Iw-hgl">
                         <rect key="frame" x="18" y="53" width="131" height="18"/>
-                        <buttonCell key="cell" type="check" title="启动时开启" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="5GQ-ra-AMP">
+                        <buttonCell key="cell" type="check" title="开机时启动" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="5GQ-ra-AMP">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" size="13" name=".HiraginoSansGBInterface-W3"/>
                         </buttonCell>
@@ -100,7 +100,7 @@ Gw
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                             <objectValues>
-                                <string>完成</string>
+                                <string>完整</string>
                                 <string>仅鼠标</string>
                                 <string>仅图标</string>
                             </objectValues>
