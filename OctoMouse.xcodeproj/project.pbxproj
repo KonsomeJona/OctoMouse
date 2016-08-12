@@ -68,6 +68,9 @@
 		DD4F7C4A13C322FA00825C6E /* StatusHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StatusHighlighted.png; path = OctoMouse/StatusHighlighted.png; sourceTree = "<group>"; };
 		DDF4EFAB16C80A510044D141 /* Status@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Status@2x.png"; path = "OctoMouse/Status@2x.png"; sourceTree = "<group>"; };
 		DDF4EFAD16C80AD30044D141 /* StatusHighlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "StatusHighlighted@2x.png"; path = "OctoMouse/StatusHighlighted@2x.png"; sourceTree = "<group>"; };
+		EDDAF2341D4DFF3E00BE9228 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hant"; path = "zh-Hant.lproj/AboutWindow.xib"; sourceTree = "<group>"; };
+		EDDAF2351D4DFFAB00BE9228 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hant"; path = "zh-Hant.lproj/Panel.xib"; sourceTree = "<group>"; };
+		EDFFAE481D4D0F7A00A15190 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hant"; path = "zh-Hant.lproj/PreferencesWindow.xib"; sourceTree = "<group>"; };
 		FC0073DC1A359984006EAD5C /* Mouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mouse.png; path = OctoMouse/Graphics/Mouse.png; sourceTree = "<group>"; };
 		FC0073DD1A359984006EAD5C /* Mouse@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Mouse@2x.png"; path = "OctoMouse/Graphics/Mouse@2x.png"; sourceTree = "<group>"; };
 		FC0073DE1A359984006EAD5C /* MouseHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MouseHighlighted.png; path = OctoMouse/Graphics/MouseHighlighted.png; sourceTree = "<group>"; };
@@ -322,6 +325,7 @@
 				ru,
 				"pt-BR",
 				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = DD4F7BF913C30F9F00825C6E;
 			productRefGroup = DD4F7C0513C30F9F00825C6E /* Products */;
@@ -398,6 +402,7 @@
 				FC66D1991CB6183800168189 /* ru */,
 				FC66D19D1CB618B600168189 /* pt-BR */,
 				FC66D1A11CB6191500168189 /* zh-Hans */,
+				EDDAF2341D4DFF3E00BE9228 /* zh-Hant */,
 			);
 			name = AboutWindow.xib;
 			path = OctoMouse;
@@ -412,6 +417,7 @@
 				FC66D1981CB6183800168189 /* ru */,
 				FC66D19C1CB618B600168189 /* pt-BR */,
 				FC66D1A01CB6191500168189 /* zh-Hans */,
+				EDFFAE481D4D0F7A00A15190 /* zh-Hant */,
 			);
 			name = PreferencesWindow.xib;
 			path = OctoMouse;
@@ -426,6 +432,7 @@
 				FC66D19A1CB6183800168189 /* ru */,
 				FC66D19E1CB618B600168189 /* pt-BR */,
 				FC66D1A21CB6191500168189 /* zh-Hans */,
+				EDDAF2351D4DFFAB00BE9228 /* zh-Hant */,
 			);
 			name = Panel.xib;
 			path = OctoMouse;
