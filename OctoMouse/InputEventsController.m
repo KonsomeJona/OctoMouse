@@ -28,7 +28,7 @@ const char* keyCodeToReadableString (CGKeyCode keyCode);
         _todayLogger = [[InputEventsLogger alloc] initWithIdentifier:[self todayDate]];
         [_todayLogger load];
     }
-    
+        
     return self;
 }
 
@@ -123,7 +123,7 @@ const char* keyCodeToReadableString (CGKeyCode keyCode);
         
         // If it's a new day, the logger will be reset
         NSString* today = [self todayDate];
-        if(![today isEqualToString:[_todayLogger identifier]]) {
+        if([today isEqualToString:[_todayLogger identifier]] == NO) {
             [_todayLogger save];
             [_todayLogger setIdentifier:today];
             [_todayLogger reset];
