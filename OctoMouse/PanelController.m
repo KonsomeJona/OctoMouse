@@ -241,6 +241,58 @@
           contextInfo:nil];
 }
 
+- (BOOL) hasLeadingNumberInString:(NSString*)s {
+    if (s)
+        return [s length] && isnumber([s characterAtIndex:0]);
+    else
+        return NO;
+}
+
+- (IBAction)exportStatistics:(id)sender {
+    // No worries about the capacity, it will expand as necessary.
+    NSMutableString *writeString = [NSMutableString stringWithCapacity:0];
+    [writeString appendString:@"date,elapsed seconds,mouse clicks,mouse distance,scroll distance,keystrokes\n"];
+    
+    int distanceUnit = [[Preferences shared] distanceUnit];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSArray *keys = [[defaults dictionaryRepresentation] allKeys];
+    
+    // Sort keys alphabetically to have the statistics ordered by date.
+    keys = [keys sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    
+    for(NSString* key in keys) {
+        /*
+         * If first character in key is not a digit,
+         * then the data is not a statistics.
+         * This is to avoid the application preferences or 
+         * other Apple data to be included in the file.
+         */
+        if([self hasLeadingNumberInString:key] == NO)
+            continue;
+        
+        InputEventsLogger *data = [[InputEventsLogger alloc] initWithIdentifier:key];
+        [data load];
+        
+        float mouseDistance = (distanceUnit == 1)?[data mouseDistanceInMiles]:[data mouseDistanceInKilometers];
+        float scrollWheelDistance = (distanceUnit == 1)?[data scrollWheelDistanceInMiles]:[data scrollWheelDistanceInKilometers];
+        
+        [writeString appendFormat:@"%@,%d,%d,%.2f,%.2f,%d\n", key, [data elapsedTime], [data mouseDown], mouseDistance, scrollWheelDistance, [data keyDown]];
+    }
+    
+    NSData *fileContents = [writeString dataUsingEncoding:NSUTF8StringEncoding];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0]; // Get documents folder
+    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"foo.csv"];
+    BOOL success = [[NSFileManager defaultManager] createFileAtPath:filePath
+                                                           contents:fileContents
+                                                         attributes:nil];
+    
+    if (success == NO) {
+        NSLog(@"Error was code: %d - message: %s", errno, strerror(errno));
+    }
+}
+
 - (IBAction)showPreferences:(id)sender {
     if(_preferencesWindowController == nil) {
         _preferencesWindowController = [[PreferencesWindowController alloc]

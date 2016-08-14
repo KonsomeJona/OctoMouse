@@ -25,39 +25,39 @@ const char* keyCodeToReadableString (CGKeyCode keyCode);
     {
         _globalLogger = [[InputEventsLogger alloc] initWithIdentifier:@"global"];
         [_globalLogger load];
-        
+
         NSDate *now = [[NSDate alloc] init];
         NSString *today = [self formatDate:now];
         _todayLogger = [[InputEventsLogger alloc] initWithIdentifier:today];
         [_todayLogger load];
-        
+
         NSString *yesterday = [self formatDate:[now dateByAddingTimeInterval: -86400.0]];
         _yesterdayLogger = [[InputEventsLogger alloc] initWithIdentifier:yesterday];
         [_yesterdayLogger load];
     }
-    
+
     return self;
 }
 
 - (void)startListening {
     [self stopListening]; // For safety, to avoid events being called twice.
-    
+
     _timer = [NSTimer scheduledTimerWithTimeInterval:1.0
                                               target:self
                                             selector:@selector(incElapsedSecond:)
                                             userInfo:nil
                                              repeats:YES];
-    
+
     id leftMouseDownHandler = ^(NSEvent *evt) {
         [_globalLogger incMouseDownWithButton:0 location:[NSEvent mouseLocation]];
         [_todayLogger incMouseDownWithButton:0 location:[NSEvent mouseLocation]];
         [self notify];
-        
+
         return evt;
     };
     _localMonitorLeftMouseDown = [NSEvent addLocalMonitorForEventsMatchingMask:NSLeftMouseDownMask handler:leftMouseDownHandler];
     _globalMonitorLeftMouseDown = [NSEvent addGlobalMonitorForEventsMatchingMask:NSLeftMouseDownMask handler:leftMouseDownHandler];
-    
+
     id rightMouseDownHandler = ^(NSEvent *evt) {
         [_globalLogger incMouseDownWithButton:1 location:[NSEvent mouseLocation]];
         [_todayLogger incMouseDownWithButton:1 location:[NSEvent mouseLocation]];
@@ -66,17 +66,17 @@ const char* keyCodeToReadableString (CGKeyCode keyCode);
     };
     _localMonitorRightMouseDown = [NSEvent addLocalMonitorForEventsMatchingMask:NSRightMouseDownMask handler:rightMouseDownHandler];
     _globalMonitorRightMouseDown = [NSEvent addGlobalMonitorForEventsMatchingMask:NSRightMouseDownMask handler:rightMouseDownHandler];
-    
+
     id mouseMovedHandler = ^(NSEvent *evt) {
         [_globalLogger newMouseLocation:[NSEvent mouseLocation]];
         [_todayLogger newMouseLocation:[NSEvent mouseLocation]];
         [self notify];
-        
+
         return evt;
     };
     _localMonitorMouseMoved =[NSEvent addLocalMonitorForEventsMatchingMask:NSMouseMovedMask handler:mouseMovedHandler];
     _globalMonitorMouseMoved =[NSEvent addGlobalMonitorForEventsMatchingMask:NSMouseMovedMask handler:mouseMovedHandler];
-    
+
     id scrollWheelHandler = ^(NSEvent *evt) {
         [_globalLogger incScrollWheelWithDeltaX:[evt deltaX] deltaY:[evt deltaY] deltaZ:[evt deltaZ]];
         [_todayLogger incScrollWheelWithDeltaX:[evt deltaX] deltaY:[evt deltaY] deltaZ:[evt deltaZ]];
@@ -85,7 +85,7 @@ const char* keyCodeToReadableString (CGKeyCode keyCode);
     };
     _localMonitorScrollWheel = [NSEvent addLocalMonitorForEventsMatchingMask:NSScrollWheelMask handler:scrollWheelHandler];
     _globalMonitorScrollWheel = [NSEvent addGlobalMonitorForEventsMatchingMask:NSScrollWheelMask handler:scrollWheelHandler];
-    
+
     id keyDownHandler = ^(NSEvent *evt) {
         if(![evt isARepeat]) {
             [_globalLogger incKeyDown:[evt keyCode]];
@@ -101,19 +101,19 @@ const char* keyCodeToReadableString (CGKeyCode keyCode);
 - (void)stopListening {
     [_timer invalidate];
     _timer = nil;
-    
+
     [NSEvent removeMonitor:_localMonitorLeftMouseDown];
     [NSEvent removeMonitor:_localMonitorRightMouseDown];
     [NSEvent removeMonitor:_localMonitorMouseMoved];
     [NSEvent removeMonitor:_localMonitorScrollWheel];
     [NSEvent removeMonitor:_localMonitorKeyDown];
-    
+
     [NSEvent removeMonitor:_globalMonitorLeftMouseDown];
     [NSEvent removeMonitor:_globalMonitorRightMouseDown];
     [NSEvent removeMonitor:_globalMonitorMouseMoved];
     [NSEvent removeMonitor:_globalMonitorScrollWheel];
     [NSEvent removeMonitor:_globalMonitorKeyDown];
-    
+
     [_globalLogger save];
     [_todayLogger save];
 }
@@ -122,12 +122,12 @@ const char* keyCodeToReadableString (CGKeyCode keyCode);
     [_globalLogger incElapsedSecond];
     [_todayLogger incElapsedSecond];
     [self notify];
-    
+
     if([_globalLogger elapsedTime] % 60 == 0) {
         // Back up
         [_globalLogger save];
         [_todayLogger save];
-        
+
         // If it's a new day, the logger will be reset
         NSDate *now = [[NSDate alloc] init];
         NSString *today = [self formatDate:now];
@@ -136,7 +136,7 @@ const char* keyCodeToReadableString (CGKeyCode keyCode);
             [_todayLogger setIdentifier:today];
             [_todayLogger reset];
             [_todayLogger load];
-            
+
             NSString *yesterday = [self formatDate:[now dateByAddingTimeInterval: -86400.0]];
             [_yesterdayLogger setIdentifier:yesterday];
             [_yesterdayLogger reset];
