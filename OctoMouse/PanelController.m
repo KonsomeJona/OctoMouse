@@ -248,7 +248,21 @@
         return NO;
 }
 
+
 - (IBAction)exportStatistics:(id)sender {
+    NSSavePanel * savePanel = [NSSavePanel savePanel];
+    [savePanel setNameFieldStringValue:@"octomouse_statistics.csv"];
+    long result	= [savePanel runModal];
+    
+    if(result == NSOKButton){
+        NSURL *fileURL = [savePanel URL];
+        NSString *filePath = [fileURL path];
+        
+        [self writeStatistics:filePath];
+    }
+}
+
+- (void)writeStatistics:(NSString *)filePath {
     // No worries about the capacity, it will expand as necessary.
     NSMutableString *writeString = [NSMutableString stringWithCapacity:0];
     [writeString appendString:@"date,elapsed seconds,mouse clicks,mouse distance,scroll distance,keystrokes\n"];
@@ -265,7 +279,7 @@
         /*
          * If first character in key is not a digit,
          * then the data is not a statistics.
-         * This is to avoid the application preferences or 
+         * This is to avoid the application preferences or
          * other Apple data to be included in the file.
          */
         if([self hasLeadingNumberInString:key] == NO)
@@ -281,9 +295,6 @@
     }
     
     NSData *fileContents = [writeString dataUsingEncoding:NSUTF8StringEncoding];
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0]; // Get documents folder
-    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"foo.csv"];
     BOOL success = [[NSFileManager defaultManager] createFileAtPath:filePath
                                                            contents:fileContents
                                                          attributes:nil];
@@ -291,6 +302,7 @@
     if (success == NO) {
         NSLog(@"Error was code: %d - message: %s", errno, strerror(errno));
     }
+
 }
 
 - (IBAction)showPreferences:(id)sender {
