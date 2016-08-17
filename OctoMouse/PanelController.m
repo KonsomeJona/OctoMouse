@@ -251,7 +251,7 @@
 
 - (IBAction)exportStatistics:(id)sender {
     NSSavePanel * savePanel = [NSSavePanel savePanel];
-    [savePanel setNameFieldStringValue:@"octomouse_statistics.csv"];
+    [savePanel setNameFieldStringValue:@"*.csv"];
     long result	= [savePanel runModal];
     
     if(result == NSOKButton){
