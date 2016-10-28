@@ -20,19 +20,31 @@
 @interface PanelController : NSWindowController <NSWindowDelegate>
 {
     BOOL _hasActivePanel;
+    
     __unsafe_unretained BackgroundView *_backgroundView;
     __unsafe_unretained id<PanelControllerDelegate> _delegate;
+    
+    // General
     __unsafe_unretained IBOutlet NSTextField *_elapsedTimeLabel;
     __unsafe_unretained IBOutlet NSTextField *_mouseDownLabel;
     __unsafe_unretained IBOutlet NSTextField *_mouseDistanceLabel;
     __unsafe_unretained IBOutlet NSTextField *_scrollWheelLabel;
     __unsafe_unretained IBOutlet NSTextField *_keyDownLabel;
     
+    // Today
     __unsafe_unretained IBOutlet NSTextField *_todayElapsedTimeLabel;
     __unsafe_unretained IBOutlet NSTextField *_todayMouseDownLabel;
     __unsafe_unretained IBOutlet NSTextField *_todayMouseDistanceLabel;
     __unsafe_unretained IBOutlet NSTextField *_todayScrollWheelLabel;
     __unsafe_unretained IBOutlet NSTextField *_todayKeyDownLabel;
+    
+    // Yesterday
+    __unsafe_unretained IBOutlet NSTextField *_yesterdayElapsedTimeLabel;
+    __unsafe_unretained IBOutlet NSTextField *_yesterdayMouseDownLabel;
+    __unsafe_unretained IBOutlet NSTextField *_yesterdayMouseDistanceLabel;
+    __unsafe_unretained IBOutlet NSTextField *_yesterdayScrollWheelLabel;
+    __unsafe_unretained IBOutlet NSTextField *_yesterdayKeyDownLabel;
+    
     __weak IBOutlet NSMenuItem *_enableAccessibilityMenuItem;
     
     BOOL _lockPanel;
