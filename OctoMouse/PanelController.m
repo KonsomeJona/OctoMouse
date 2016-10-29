@@ -358,6 +358,14 @@
     [_todayMouseDownLabel setStringValue: [NSString stringWithFormat:@"%d", [today mouseDown]]];
     [_todayScrollWheelLabel setStringValue: [today formattedScrollWheelDistance:distanceUnit]];
     [_todayKeyDownLabel setStringValue: [NSString stringWithFormat:@"%d", [today keyDown]]];
+    
+    InputEventsLogger* yesterday = [[InputEventsController shared] yesterdayLogger];
+    
+    [_yesterdayElapsedTimeLabel setStringValue: [yesterday formattedElapsedTime]];
+    [_yesterdayMouseDistanceLabel setStringValue: [yesterday formattedMouseDistance:distanceUnit]];
+    [_yesterdayMouseDownLabel setStringValue: [NSString stringWithFormat:@"%d", [yesterday mouseDown]]];
+    [_yesterdayScrollWheelLabel setStringValue: [yesterday formattedScrollWheelDistance:distanceUnit]];
+    [_yesterdayKeyDownLabel setStringValue: [NSString stringWithFormat:@"%d", [yesterday keyDown]]];
 }
 
 
