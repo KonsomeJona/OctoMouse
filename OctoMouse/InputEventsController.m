@@ -25,17 +25,10 @@ const char* keyCodeToReadableString (CGKeyCode keyCode);
     {
         _globalLogger = [[InputEventsLogger alloc] initWithIdentifier:@"global"];
         [_globalLogger load];
-        
-        NSDate *now = [[NSDate alloc] init];
-        NSString *today = [self formatDate:now];
-        _todayLogger = [[InputEventsLogger alloc] initWithIdentifier:today];
+        _todayLogger = [[InputEventsLogger alloc] initWithIdentifier:[self todayDate]];
         [_todayLogger load];
-        
-        NSString *yesterday = [self formatDate:[now dateByAddingTimeInterval: -86400.0]];
-        _yesterdayLogger = [[InputEventsLogger alloc] initWithIdentifier:yesterday];
-        [_yesterdayLogger load];
     }
-    
+        
     return self;
 }
 
@@ -129,18 +122,12 @@ const char* keyCodeToReadableString (CGKeyCode keyCode);
         [_todayLogger save];
         
         // If it's a new day, the logger will be reset
-        NSDate *now = [[NSDate alloc] init];
-        NSString *today = [self formatDate:now];
-        if(![today isEqualToString:[_todayLogger identifier]]) {
+        NSString* today = [self todayDate];
+        if([today isEqualToString:[_todayLogger identifier]] == NO) {
             [_todayLogger save];
             [_todayLogger setIdentifier:today];
             [_todayLogger reset];
             [_todayLogger load];
-            
-            NSString *yesterday = [self formatDate:[now dateByAddingTimeInterval: -86400.0]];
-            [_yesterdayLogger setIdentifier:yesterday];
-            [_yesterdayLogger reset];
-            [_yesterdayLogger load];
         }
     }
 }
@@ -153,18 +140,15 @@ const char* keyCodeToReadableString (CGKeyCode keyCode);
     return _todayLogger;
 }
 
-- (InputEventsLogger*)yesterdayLogger {
-    return _yesterdayLogger;
-}
-
 - (void)notify {
     [[NSNotificationCenter defaultCenter] postNotificationName:InputEventNotificationTag object:self];
 }
 
-- (NSString*)formatDate:(NSDate*)date {
+- (NSString*)todayDate {
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"yyyy-MM-dd"];
-    return [dateFormat stringFromDate:date];
+    NSDate *now = [[NSDate alloc] init];
+    return [dateFormat stringFromDate:now];
 }
 
 const char* keyCodeToReadableString (CGKeyCode keyCode) {
