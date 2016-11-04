@@ -26,6 +26,7 @@ If you are still concerned about privacy, you can check the source code and buil
 
 * No icon in the dock
 * Keep your analytics always under your eyes
+* Export your analytics to a csv file
 * Parameterizable
 * Available in several languages:
     * English
@@ -33,6 +34,7 @@ If you are still concerned about privacy, you can check the source code and buil
     * German
     * Brazilian Portuguese
     * Simplified Chinese
+    * Traditional Chinese
 
 Any new translation is welcomed!
 
@@ -79,8 +81,6 @@ Please offer me a :coffee: so I can stay awake and work hard on the project.
 According to the [Balmer Peak theory](https://xkcd.com/323/), offering me :beer: could even make me more productive.
 ### PayPal
 [![Donate](https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_cc_147x47.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GBPR95PCSZSMC)
-### Bitcoin
-[![Donate](https://www.coinbase.com/assets/buttons/donation_large-5cf4f17cc2d2ae2f45b6b021ee498297409c94dcf0ba1bbf76fd5668e80b0d02.png)](https://www.coinbase.com/checkouts/1a7efbc5c8efa25670885d0b5339a46a)
 
 ## Translate
 We want OctoMouse to be available in many languages as possible in order to make this application accessible by people all around the world. Only a few texts need to be translated...
