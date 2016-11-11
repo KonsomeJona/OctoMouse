@@ -3,19 +3,21 @@
 OctoMouse is a free and open-source application for MAC OSX that measures your mouse and keyboard activities.
 It is developed using Xcode and Cocoa framework in Objective-C.
 
- ![Status bar screenshot](http://octomouse.takohi.com/images/screenshots/screen-1.png)
+ ![Status bar screenshot](https://konsomejona.github.io/OctoMouse/images/screenshots/screen-1.png)
 
 With OctoMouse, you will be able to always keep under your eyes how far did you travel with your mouse/trackpad, how many times did you press a key, how long did you use your computer and so on.
 
-![Panel screenshot](http://octomouse.takohi.com/images/screenshots/screen-2.png)
+![Panel screenshot](https://konsomejona.github.io/OctoMouse/images/screenshots/screen-2.png)
 
-![Preferences screenshot](http://octomouse.takohi.com/images/screenshots/screen-3.png)
+![Preferences screenshot](https://konsomejona.github.io/OctoMouse/images/screenshots/screen-3.png)
 
 # Download
+To download and use OctoMouse, please refer to the [Releases page](https://github.com/KonsomeJona/OctoMouse/releases).
 
-The application is available on [Mac App Store](https://itunes.apple.com/us/app/octomouse/id1101621241?ls=1&mt=12).
-[![App Store](http://octomouse.takohi.com/images/macappstore.png)](https://itunes.apple.com/us/app/octomouse/id1101621241?ls=1&mt=12)
-You can also check the [OctoMouse's official website](https://Takohi-Jona.github.io/OctoMouse).
+The first public release of the application is also available on [Mac App Store](https://itunes.apple.com/us/app/octomouse/id1101621241?ls=1&mt=12).   _However_, the current version available on this platform is now outdated as Apple is refusing any new update as they are concerned of the privacy issue this application might cause.
+[![App Store](https://konsomejona.github.io/OctoMouse/images/macappstore.png)](https://itunes.apple.com/us/app/octomouse/id1101621241?ls=1&mt=12)
+ If you are currently using the version downloaded from the Mac App Store, I suggest you to replace it by the release available here on GitHub.
+You can also download it from the [OctoMouse's official website](https://konsomejona.github.io/OctoMouse/).
 
 # Privacy
 
@@ -49,8 +51,8 @@ Any new translation is welcomed!
     * Display a mouse and show which button is the most used;
     * Display a screen and show which area of your screen the cursor has been located the most.
 
-![Planned feature 1 screenshot](http://octomouse.takohi.com/images/screenshots/planned-1.png)
-![Planned feature 2 screenshot](http://octomouse.takohi.com/images/screenshots/planned-2.png)
+![Planned feature 1 screenshot](https://konsomejona.github.io/OctoMouse/images/screenshots/planned-1.png)
+![Planned feature 2 screenshot](https://konsomejona.github.io/OctoMouse/images/screenshots/planned-2.png)
 
 In order to see these new features coming as soon as possible, please support me!
 
@@ -62,7 +64,7 @@ For a security reason, OSX prevents any application to detect and retrieve all k
 
 To enable the key pressed counter feature, make sure this application is added and checked in: _System Preferences > Security & Privacy > Privacy > Accessibility_. You might need to restart the application.
 
-![Planned feature 2 screenshot](http://octomouse.takohi.com/images/privacy_screen.png)
+![Privacy screen](https://konsomejona.github.io/OctoMouse/images/privacy_screen.png)
 
 # Teach yourself!
 Use the source code to learn more about OSX, Cocoa and Objective-C development.
@@ -98,4 +100,3 @@ By giving a good rate and a nice comment to the application or simply sending me
 # Who am I?
 I am me. I try to make some cool stuff during my free time outside my actual job. It is sometimes hard to find some spare time so I try to do my best. This is why I need your support!
 Also, take time to visit my website [Takohi.com](http://www.takohi.com).
-
