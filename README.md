@@ -14,10 +14,8 @@ With OctoMouse, you will be able to always keep under your eyes how far did you 
 # Download
 To download and use OctoMouse, please refer to the [Releases page](https://github.com/KonsomeJona/OctoMouse/releases).
 
-The first public release of the application is also available on [Mac App Store](https://itunes.apple.com/us/app/octomouse/id1101621241?ls=1&mt=12).   _However_, the current version available on this platform is now outdated as Apple is refusing any new update as they are concerned of the privacy issue this application might cause.
-[![App Store](https://konsomejona.github.io/OctoMouse/images/macappstore.png)](https://itunes.apple.com/us/app/octomouse/id1101621241?ls=1&mt=12)
- If you are currently using the version downloaded from the Mac App Store, I suggest you to replace it by the release available here on GitHub.
-You can also download it from the [OctoMouse's official website](https://konsomejona.github.io/OctoMouse/).
+Unfortunately, Octomouse was removed from the App Store as Apple is concerned by the privacy issue this application might cause.
+If you are currently using the version downloaded from the Mac App Store, I suggest you to replace it by the release available here on GitHub.
 
 # Privacy
 
@@ -92,7 +90,7 @@ If you want to help for adding any new translation, [contact me](contact@takohi.
 This project is open-source so you can freely contribute to it! Open a new issue if you find a bug, make a pull request if you implement a new feature... Whatever that would make OctoMouse better. I will also make sure to update the application on the App Store.
 
 ## Spread the word!
-Share this application around you. ;-)
+Share this application around you.
 
 ## Or just give me nice words!
 By giving a good rate and a nice comment to the application or simply sending me a little message will always make me happy.
