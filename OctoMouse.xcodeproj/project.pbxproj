@@ -46,6 +46,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C27A6CB825EE0AB1009A47C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PreferencesWindow.xib; sourceTree = "<group>"; };
+		C27A6CB925EE0AB1009A47C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AboutWindow.xib; sourceTree = "<group>"; };
+		C27A6CBA25EE0AB1009A47C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Panel.xib; sourceTree = "<group>"; };
 		DD4F7C0413C30F9F00825C6E /* OctoMouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OctoMouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4F7C0813C30F9F00825C6E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DD4F7C0B13C30F9F00825C6E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -110,11 +113,8 @@
 		FCC6A42D1A38094600AD0513 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "OctoMouse/Graphics/Icon@2x.png"; sourceTree = "<group>"; };
 		FCD73F151A429D30004BCE9A /* AboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutWindowController.h; sourceTree = "<group>"; };
 		FCD73F161A429D30004BCE9A /* AboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutWindowController.m; sourceTree = "<group>"; };
-		FCE1DBC41A43D4DA00F21F30 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AboutWindow.xib; sourceTree = "<group>"; };
 		FCE1DBC61A43D4DB00F21F30 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/AboutWindow.xib; sourceTree = "<group>"; };
-		FCE1DBC81A43D4F000F21F30 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PreferencesWindow.xib; sourceTree = "<group>"; };
 		FCE1DBCA1A43D4F200F21F30 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/PreferencesWindow.xib; sourceTree = "<group>"; };
-		FCE1DBCC1A43D4FA00F21F30 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Panel.xib; sourceTree = "<group>"; };
 		FCE1DBCE1A43D4FB00F21F30 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/Panel.xib; sourceTree = "<group>"; };
 		FCE1DBCF1A44136D00F21F30 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = OctoMouse/MainMenu.xib; sourceTree = "<group>"; };
 		FCFD3AA41A42B61100BA5DA7 /* BorderlessKeyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BorderlessKeyWindow.h; sourceTree = "<group>"; };
@@ -301,11 +301,11 @@
 		DD4F7BFB13C30F9F00825C6E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = Takohi;
 				TargetAttributes = {
 					DD4F7C0313C30F9F00825C6E = {
-						DevelopmentTeam = DLDHLCUF8Z;
+						DevelopmentTeam = G8FJKB3GDJ;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 1;
@@ -316,7 +316,7 @@
 			};
 			buildConfigurationList = DD4F7BFE13C30F9F00825C6E /* Build configuration list for PBXProject "OctoMouse" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -326,6 +326,7 @@
 				"pt-BR",
 				"zh-Hans",
 				"zh-Hant",
+				Base,
 			);
 			mainGroup = DD4F7BF913C30F9F00825C6E;
 			productRefGroup = DD4F7C0513C30F9F00825C6E /* Products */;
@@ -396,13 +397,13 @@
 		FCE1DBC51A43D4DA00F21F30 /* AboutWindow.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FCE1DBC41A43D4DA00F21F30 /* en */,
 				FCE1DBC61A43D4DB00F21F30 /* fr */,
 				FC09C6951AB0528F0096F2BE /* de */,
 				FC66D1991CB6183800168189 /* ru */,
 				FC66D19D1CB618B600168189 /* pt-BR */,
 				FC66D1A11CB6191500168189 /* zh-Hans */,
 				EDDAF2341D4DFF3E00BE9228 /* zh-Hant */,
+				C27A6CB925EE0AB1009A47C7 /* Base */,
 			);
 			name = AboutWindow.xib;
 			path = OctoMouse;
@@ -411,13 +412,13 @@
 		FCE1DBC91A43D4F000F21F30 /* PreferencesWindow.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FCE1DBC81A43D4F000F21F30 /* en */,
 				FCE1DBCA1A43D4F200F21F30 /* fr */,
 				FC09C6941AB0528F0096F2BE /* de */,
 				FC66D1981CB6183800168189 /* ru */,
 				FC66D19C1CB618B600168189 /* pt-BR */,
 				FC66D1A01CB6191500168189 /* zh-Hans */,
 				EDFFAE481D4D0F7A00A15190 /* zh-Hant */,
+				C27A6CB825EE0AB1009A47C7 /* Base */,
 			);
 			name = PreferencesWindow.xib;
 			path = OctoMouse;
@@ -426,13 +427,13 @@
 		FCE1DBCD1A43D4FA00F21F30 /* Panel.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FCE1DBCC1A43D4FA00F21F30 /* en */,
 				FCE1DBCE1A43D4FB00F21F30 /* fr */,
 				FC09C6961AB0528F0096F2BE /* de */,
 				FC66D19A1CB6183800168189 /* ru */,
 				FC66D19E1CB618B600168189 /* pt-BR */,
 				FC66D1A21CB6191500168189 /* zh-Hans */,
 				EDDAF2351D4DFFAB00BE9228 /* zh-Hant */,
+				C27A6CBA25EE0AB1009A47C7 /* Base */,
 			);
 			name = Panel.xib;
 			path = OctoMouse;
@@ -445,11 +446,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -483,11 +495,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
@@ -518,10 +541,12 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = G8FJKB3GDJ;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OctoMouse/OctoMouse-Prefix.pch";
 				INFOPLIST_FILE = "OctoMouse/OctoMouse-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.takohi.octomouse;
 				PRODUCT_NAME = OctoMouse;
 				PROVISIONING_PROFILE = "";
@@ -538,10 +563,12 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = G8FJKB3GDJ;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OctoMouse/OctoMouse-Prefix.pch";
 				INFOPLIST_FILE = "OctoMouse/OctoMouse-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.takohi.octomouse;
 				PRODUCT_NAME = OctoMouse;
 				PROVISIONING_PROFILE = "";
